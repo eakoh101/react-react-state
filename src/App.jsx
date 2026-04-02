@@ -1,16 +1,22 @@
 import "./App.css";
+import React, { useState } from 'react';
+
 
 function App() {
+  const[hello, setHello] = useState("Greeting Message")
   return (
     <div className="App">
-      <div className="greeting-container">Greeting Message</div>
+      <div className="greeting-container">{hello}</div>
+
       <div className="buttons">
-        <button>สวัสดี!</button>
-        <button>Hi!</button>
-        <button>你好!</button>
+        <button onClick={()=>setHello("สวัสดี!")}>สวัสดี!</button>
+        <button onClick={()=>setHello("Hi!")}>Hi!</button>
+        <button onClick={()=>setHello("你好!")}>你好!</button>
       </div>
     </div>
   );
 }
 
 export default App;
+
+
